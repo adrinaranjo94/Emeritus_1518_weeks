@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Titulo página</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      h2 {
+        background-color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Hola</p>
+    <h1
+      class="title__red"
+      style="background-color: brown; width: 50%; height: 200px"
+    >
+      CSS Selector
+    </h1>
+    <!-- Tag selector -->
+    <h2 class="title__red">Titlo más pequeño</h2>
+    <!-- Class selector -->
+    <h2 class="title__red">Titulo 2 de color rojo</h2>
+    <!-- Id selector -->
+    <h2 id="titleRed">Titulo 2 de color rojo</h2>
+
+    <!-- Priority -->
+    <h1>Priority</h1>
+    <hr />
+    <!-- external -->
+    <h2>External CSS</h2>
+    <!-- internal -->
+    <h2>Internal CSS</h2>
+    <!-- inline -->
+    <h2 style="color: pink">Internal CSS</h2>
+
+    <p id="texto1"></p>
+
+    <!-- scripts -->
+    <!-- external -->
+    <script src="./script1.js"></script>
+    <script src="./script2.js"></script>
+    <script>
+      let friends2 = ["Adrian"];
+      console.log("internal message", friends2);
+
+      // Editar contenido HTML de un parrafo por ID
+      //
+      document.getElementById("texto1").innerHTML = "texto modificado desde JS";
+    </script>
+  </body>
+</html>

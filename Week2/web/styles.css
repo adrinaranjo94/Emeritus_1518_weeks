@@ -1,0 +1,15 @@
+h1 {
+    background-color: blue;
+}
+
+h2 {
+    background-color: green;
+}
+
+.title__red {
+    color: red;
+}
+
+#titleRed {
+    color: red;
+}
