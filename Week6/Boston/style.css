@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-background: #0e2c40;
+    --secondary-background: #1a4a5a;
+    --font-color: #fff;
+}
+
+/* FROM MOBILE STYLES */
+body{
+    background-color: var(--main-background);
+}
+
+.container {
+    width: 100%;
+}
+
+.content {
+    margin: 0 auto;
+    max-width: 1440px;
+}
+
+.navbar {
+    background-color: var(--secondary-background);
+    padding: 16px 24px;
+    height: 60px;
+}
+
+.header {
+    margin-top: 24px;
+    text-align: center;
+    color: var(--font-color);
+}
+
+.header h1 {
+    font-size: 56px;
+    margin-bottom: 16px;
+}
+
+.actions {
+    max-width: 1200px;
+    margin: 32px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.action {
+    background-color: var(--secondary-background);
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 16px;
+}
+
+#listElements {
+    color: var(--font-color);
+}
+
+.item {
+    margin: 16px 32px;
+    background-color: var(--secondary-background);
+    border-radius: 8px;
+    padding: 8px 16px;
+}
+
+/* TABLET STYLES */
+@media (min-width: 768px)  {
+    .actions {
+        /* background-color: red; */
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 768px) and (orientation: landscape)  {
+    .actions {
+        /* background-color: pink; */
+        flex-direction: row;
+    }
+}
+
+
+/* DESKTOP STYLES */
+@media (min-width: 1220px)  {
+    .actions {
+        gap: 24px
+    }
+}

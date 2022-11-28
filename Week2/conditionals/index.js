@@ -41,3 +41,14 @@ console.log("tipo de variable", typeof iNumber2);
 
 if (iNumber <= iNumber2) {
 }
+
+//ternary
+
+let number = 2;
+if (number % 2 === 0) {
+  return "par";
+} else {
+  return "impar";
+}
+
+number % 2 === 0 ? "par" : "impar";

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Boston App</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- NAVBAR ELEMENT -->
+      <div class="navbar">
+        <p>Boston App</p>
+      </div>
+      <!-- ELEMENT CONTENT -->
+      <div class="content">
+        <!-- HEADER ELEMENT -->
+        <div class="header">
+          <h1>Welcome to Boston App</h1>
+          <h4>Here you can search and filter data as you want</h4>
+        </div>
+        <!-- ACTIONS ELEMENT -->
+        <div class="actions">
+          <div class="action action--salary">
+            <button>Asc By Salary</button>
+            <button>Desc By Salary</button>
+          </div>
+          <div class="action action--name">
+            <button>Asc By Name</button>
+            <button>Desc By Name</button>
+          </div>
+          <div class="action action--country">
+            <button>Asc By Country</button>
+            <button>Desc By Country</button>
+          </div>
+        </div>
+        <!-- LIST ELEMENT -->
+        <div id="listElements"></div>
+      </div>
+    </div>
+    <script src="./data.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
