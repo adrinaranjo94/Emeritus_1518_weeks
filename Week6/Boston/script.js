@@ -1,3 +1,5 @@
+const idListElements = document.getElementById("listElements");
+
 const createDataFromAPI = (dataAPI) => {
   return dataAPI.map((itemAPI) => {
     return {
@@ -9,6 +11,8 @@ const createDataFromAPI = (dataAPI) => {
   });
 };
 
+const bostonData = createDataFromAPI(boston.data);
+
 const createHTMLFromData = (data) => {
   return data
     .map(
@@ -18,10 +22,31 @@ const createHTMLFromData = (data) => {
     .join("");
 };
 
+const orderByProperty = (property, direction) => {
+  console.log("property", property);
+  // ordenamos por property
+
+  const orderedData = bostonData.sort((a, b) => {
+    if (typeof a[property] === "string") {
+      if (direction === "asc") {
+        return a[property].toLowerCase() > b[property].toLowerCase() ? 1 : -1;
+      } else {
+        return a[property].toLowerCase() > b[property].toLowerCase() ? -1 : 1;
+      }
+    } else {
+      if (direction === "asc") {
+        return a[property] > b[property] ? 1 : -1;
+      } else {
+        return a[property] > b[property] ? -1 : 1;
+      }
+    }
+  });
+
+  renderData(orderedData, idListElements);
+};
+
 const renderData = (data, htmlContainer) => {
   htmlContainer.innerHTML = createHTMLFromData(data);
 };
 
-const bostonData = createDataFromAPI(boston.data);
-
-renderData(bostonData, document.getElementById("listElements"));
+renderData(bostonData, idListElements);
