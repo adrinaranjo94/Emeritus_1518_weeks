@@ -5,22 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Netflix</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script
+      src="https://kit.fontawesome.com/b575d134f9.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <div class="navbar">
-      <div class="navbar__logo"><img src="./assets/img/logo.png" alt="" /></div>
-      <div class="navbar__browser">
+      <div class="navbar__logo">
+        <img src="assets/img/logo.png" alt="Logo" />
+      </div>
+      <div class="navbar__browse">
         <ul>
-          <li class="navbar__item">Home</li>
+          <li class="navbar__item navbar__item--active">Home</li>
           <li class="navbar__item">Movies</li>
-          <li class="navbar__item">My List</li>
+          <li class="navbar__item">My list</li>
         </ul>
+      </div>
+      <div class="navbar__menu">
+        <div class="navbar__menuDesktop">
+          <i class="fas fa-search"></i>
+          <i class="fas fa-bell"></i>
+          <i class="fas fa-gift"></i>
+          <i class="fas fa-user"></i>
+        </div>
+        <div class="navbar__menuMobile">
+          <i class="fas fa-user"></i>
+          <div class="navbarMobile__list">
+            <div class="navbarMobile__item">
+              <i class="fas fa-search"></i> Search
+            </div>
+            <div class="navbarMobile__item">
+              <i class="fas fa-gift"></i> Gift
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="header">
       <div class="header__video">
-        <video src="./assets/video/vid.mp4" muted autoplay loop></video>
+        <video src="assets/video/vid.mp4" muted autoplay loop></video>
       </div>
       <div class="header__info">
         <div class="header__infoType">
@@ -35,8 +60,10 @@
         </div>
       </div>
     </div>
-    <div class="containerMovies">
-      <div class="sections" id="moviesSection"></div>
+    <div class="main">
+      <div class="main__section" id="mainSection"></div>
     </div>
+    <script src="assets/js/apiKey.js"></script>
+    <script src="assets/js/script.js"></script>
   </body>
 </html>
