@@ -1,24 +1,26 @@
-import logo from "./logo.svg";
-import "./App.css";
-import { Header } from "./Header";
+import {
+  Button,
+  DarkButton,
+  LightButton,
+  ShapeButton,
+} from "./components/Button";
 
-function App() {
+import { Content } from "./Content";
+import HookState from "./hooks";
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Header name="Hola" />
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React in Emeritus
-        </a>
-      </header>
+    <div>
+      Hola React
+      <Button>Hola a todos</Button>
+      <DarkButton>Hola a todos</DarkButton>
+      <LightButton>Hola a todos</LightButton>
+      <ShapeButton>Hola a todos shape</ShapeButton>
+      <br />
+      <hr />
+      <HookState />
     </div>
   );
-}
+};
 
-export default App;
+export { App };
