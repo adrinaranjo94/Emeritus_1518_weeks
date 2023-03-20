@@ -1,12 +1,9 @@
 import React from "react";
 import { Button } from "./";
-
+import ButtonStyles from "./DarkButton.module.css";
+import "./DarkButton.css";
 const DarkButton = (props) => {
-  return (
-    <Button style={{ background: "#000", color: "#fff" }}>
-      {props.children}
-    </Button>
-  );
+  return <Button classes={[ButtonStyles.dark]}>{props.children}</Button>;
 };
 
 export { DarkButton };

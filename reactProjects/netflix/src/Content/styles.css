@@ -1,0 +1,6 @@
+.content {
+    width: 100%;
+    background-color: green;
+    padding: 16px 24px;
+    flex: 1;
+}

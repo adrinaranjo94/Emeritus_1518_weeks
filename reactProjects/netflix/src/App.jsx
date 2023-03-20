@@ -7,18 +7,27 @@ import {
 
 import { Content } from "./Content";
 import HookState from "./hooks";
+import { Navbar } from "./Navbar";
+
+import "./App.css";
+import { Chat } from "./Chat";
+import { HookRef } from "./hooks/Hookref";
 
 const App = () => {
   return (
-    <div>
+    <div className="App">
       Hola React
       <Button>Hola a todos</Button>
-      <DarkButton>Hola a todos</DarkButton>
+      <DarkButton>Soy el oscuro</DarkButton>
       <LightButton>Hola a todos</LightButton>
-      <ShapeButton>Hola a todos shape</ShapeButton>
+      {/*<ShapeButton>Hola a todos shape</ShapeButton>
       <br />
-      <hr />
-      <HookState />
+      <hr />*/}
+      {/* <HookState /> */}
+      <HookRef />
+      {/* <Navbar />
+      <Content />
+      <Chat /> */}
     </div>
   );
 };
